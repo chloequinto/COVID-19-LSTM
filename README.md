@@ -3,7 +3,7 @@
 ### Discussion
 Originally located at [a different repository](https://github.com/dangural/CPE-695-Final-Project) for my ***CPE 695 Applied Machine Learning*** final project. This project analyzes not only COVID-19, but also SARS, H1N1, MERS, and Ebola. Check out the preliminary work.        
 
-This repo extends the work and focuses on more on COVID-19 as there are more datasets.   
+This repo extends the work and focuses on more on COVID-19 as there are more data points. 
 
 ### Abstract 
 Due to the recent novel COVID-19 pandemic, there is a strong motivation to forecast or predict the number of confirmed cases for each geographic location. Forecasts based on statistical and mathematical models are imperative in finding the best interventions to limit the spread of the COVID-19 from human to human. This study is intended to utilize Long Short Term Memory (LSTM). LSTM constitutes the best example of a successful learning of order dependence in sequence prediction problems. Several types of LSTM were applied on the COVID-19 data set to in order predict  how many  cases  of  each  virus  will  spread  within the US.       
@@ -32,22 +32,25 @@ cd src/models
 
 ### Analysis  
 ##### Comparison of LSTMs
-Previously, the work done in my final project only had COVID-19 dataset up to the date of March 23rd. After applying Vanilla LSTM, Stacked LSTM, and Bidirectional LSTM. The group evaluated the models by calculating the loss function: mean squared error (MSE) and the root mean squred error (RMSE).   
+Previously, the work done in my final project only had COVID-19 dataset report up to the date of March 23rd. The group looked at vanilla LSTM, Stacked LSTM, and Bidirectional LSTM models. The group evaluated the models by calculating the loss function: mean squared error (MSE) and the root mean squred error (RMSE).   
 
 <img src="https://cdn-media-1.freecodecamp.org/images/hmZydSW9YegiMVPWq2JBpOpai3CejzQpGkNG" width="40%">  
 <br>
 <img src="https://miro.medium.com/max/966/1*lqDsPkfXPGen32Uem1PTNg.png" width="40%">
 
+<br/>
 The group found that Vanilla LSTM gave a lower RMSE score. The group, therefore, used Vanilla LSTM to analyze COVID-19 data from China, Italy, and the US.    
  
 | Model        | MSE           | RMSE  |
 | ------------- |:-------------:| -----:|
 | Vanilla LSTM     |107970            | 328.589 |
-| Stacked LSTM     | 1.07524e+07      |   327.09 |
+| Stacked LSTM     | 1.07524e+07      |   340.09 |
 | Bidirectional LSTM |  1.77851e+06   |   1333.61|
 
 
 ![image info](./docs/CPE695/Previous_COVID19.png)
+
+--- 
 After retrieving the most current covid-19 data from CSSE, I analyzed the different LSTM models and found that bidirectional LSTM works best.   
 
 | Model        | MSE            | RMSE  |
@@ -104,10 +107,10 @@ Comparison of Confirmed and LSTM Predictions
 
 
 #### Ways to improve? 
-- Would adding a dropout layer give a better accuracy? 
+- Would adding a dropout layer give a better accuracy?    
 &nbsp; &nbsp; &nbsp; No, not in this case. While adding a drop out layer will prevent overfitting, adding a drop out layer to LSTM cells in this case, there will be a chance of forgetting something that's important. 
 <br/>
-- Would changing the number of epochs make a difference? 
+- Would changing the number of epochs make a difference?    
 &nbsp; &nbsp; &nbsp; I addressed this question within train_and_test.ipynb and found that the loss function flatlines after 1 epoch. This could be due to multiple factors but it could be the generalization ability of the network. The network is not complicated or deep enough for the task. The data set starts on January and ends in May. If the time steps are 3 days, then that only leaves 50 datasets to analyze which is not a lot. 
 
 
@@ -118,5 +121,4 @@ This project welcomes contributions and suggestions.
 3. Create pull request against staging branch 
 
 #### Future Work 
-- Write a script to download most current dataset and run model (***currently in progress***)
 - Analyze different countries
