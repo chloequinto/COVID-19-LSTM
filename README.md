@@ -7,4 +7,4 @@ Originally located at [a different repository](https://github.com/dangural/CPE-6
 
 
 ### Data Set 
-This model uses COVID-19 Data [Repository](https://github.com/CSSEGISandData/COVID-19) by the Center of Systems Science and Engineering (CSSE) at Johns Hopkins University 
+This model uses [COVID-19 Data Repository](https://github.com/CSSEGISandData/COVID-19) by the Center of Systems Science and Engineering (CSSE) at Johns Hopkins University 
