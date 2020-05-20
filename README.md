@@ -107,11 +107,10 @@ Comparison of Confirmed and LSTM Predictions
 
 
 #### Ways to improve? 
-- Would adding a dropout layer give a better accuracy?    
-&nbsp; &nbsp; &nbsp; No, not in this case. While adding a drop out layer will prevent overfitting, adding a drop out layer to LSTM cells in this case, there will be a chance of forgetting something that's important. 
-<br/>
-- Would changing the number of epochs make a difference?    
-&nbsp; &nbsp; &nbsp; I addressed this question within train_and_test.ipynb and found that the loss function flatlines after 1 epoch. This could be due to multiple factors but it could be the generalization ability of the network. The network is not complicated or deep enough for the task. The data set starts on January and ends in May. If the time steps are 3 days, then that only leaves 50 datasets to analyze which is not a lot. 
+- Would adding a dropout layer give a better accuracy?       
+&nbsp; &nbsp; &nbsp; No, not in this case. While adding a drop out layer will prevent overfitting, adding a drop out layer to LSTM cells in this case, there will be a chance of forgetting something that's important.    
+- Would changing the number of epochs make a difference?                
+&nbsp; &nbsp; &nbsp; I addressed this question within train_and_test.ipynb and found that the loss function flatlines after 1 epoch. This could be due to multiple factors but it could be the generalization ability of the network. The network is not complicated or deep enough for the task. The data set starts on January and ends in May. If the time steps are 3 days, then that only leaves 50 datasets to analyze which is not a lot.    
 
 
 #### Contributing 
@@ -122,3 +121,4 @@ This project welcomes contributions and suggestions.
 
 #### Future Work 
 - Analyze different countries
+- Add test cases (in progress) 
